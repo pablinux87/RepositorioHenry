@@ -17,3 +17,5 @@ function puedeManejar(edad) {
 }
 
 puedeManejar(17);
+
+console.log(21 % 5)
