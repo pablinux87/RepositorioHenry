@@ -56,11 +56,12 @@ function tieneTresDigitos(num) {
     // Si el número recibido tiene tres dígitos retornar True.
     // Caso contrario, retornar False.
     // Tu código:
-    console.log(num)
-    if(num>99 && num<1000) return true;
+    num=num.toString()
+    var cant=num.split('');
+    if(cant.length===3) return true;
     else return false;
  }
 
- console.log(tieneTresDigitos(123))
+ console.log(tieneTresDigitos(222))
 
 
