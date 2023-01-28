@@ -1,3 +1,4 @@
+/*
 var colores=['amarillo','azul'];
 colores.push('rojo');
 colores.unshift('verde');
@@ -100,3 +101,125 @@ function empiezaConNueve(num) {
  }
 
  console.log(empiezaConNueve(923))
+
+ function todosIguales(array) {
+   // Si todos los elementos del arreglo son iguales, retornar True.
+   // Caso contrario retornar False.
+   // Tu código:
+   var c=array[0];
+   control=true;
+   console.log(c);
+   array.every(elem => {
+      if(elem!==c) control=false;
+      return;
+   });
+   return control;
+ }
+
+console.log(todosIguales([97, 100, 190, 9]))
+console.log(todosIguales([6,6,6]))
+
+function todosIguales(array) {
+   return array.length === new Set(array).size;
+}
+
+console.log(todosIguales([97, 100, 190, 9]))
+console.log(todosIguales([6,6,6]))
+
+
+function todosIguales(array) {
+   var firstElement = array[0];
+   return array.every(element => {
+     return element === firstElement;
+   });
+ }
+
+console.log(todosIguales([97, 100, 190, 9]))
+console.log(todosIguales([6,6,6]))
+
+function tablaDelSeis() {
+   // Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
+   // La función devuelve un arreglo con los resultados de la tabla de multiplicar del 6 en orden creciente.
+   // Tu código:
+   arr=[];
+   for (i=0; i<61; i++){
+
+      arr.push(i*6);
+   }
+   return arr;
+}
+
+
+console.log(tablaDelSeis())
+
+function mayorACien(array) {
+   // La función recibe un arreglo con enteros entre 0 y 200.
+   // Recorrerlo y retornar un arreglo con todos los valores mayores a 100 (no incluye el 100).
+   // Tu código:
+   arr=[];
+   array.every(num => {
+      if(num>100) arr.push(num);
+      return arr;
+   })
+   return arr;
+}
+
+console.log(mayorACien([100, 4, 56, 78, 200, 120, 7, 160, 148, 22]))
+
+
+
+function breakStatement(num) {
+   // Iterar en un bucle aumentando en 2 el número recibido hasta un límite de 10 veces.
+   // Guardar cada nuevo valor en un arreglo y retornarlo.
+   // Si en algún momento el valor de la suma y la cantidad de iteraciones coinciden, debe interrumpirse
+   // la ejecución y retornar el string: "Se interrumpió la ejecución".
+   // [PISTA]: utiliza el statement 'break'.
+   // Tu código:
+   let arr=[];
+   let control=0;
+   for (i=0; i<11 ;i++){
+      if(i===num) {
+         control=1;
+         break;
+      }
+      num+=2;
+      arr[i]=num;
+   }
+   if (control===1) return "Se interrumpió la ejecución";
+   return arr;
+}
+
+
+console.log(breakStatement(50))
+
+
+function continueStatement(num) {
+   // Iterar en un bucle aumentando en 2 el número recibido hasta un límite de 10 veces.
+   // Guardar cada nuevo valor en un array y retornarlo.
+   // Cuando el número de iteraciones alcance el valor 5, no se suma ese caso y
+   // se continua con la siguiente iteración.
+   // [PISTA]: utiliza el statement 'continue'.
+   // Tu código:
+   let arr=[];
+   i=0;
+   while(i<10){
+      i++;
+      if(i===5) {
+         continue;
+      }
+      num+=2;
+      arr.push(num);
+   }
+   return arr;
+}
+
+console.log(continueStatement(50))
+
+*/
+
+var numero=833432;
+var myArr = String(numero).split('').map((num)=>{
+   return Number(num)
+ });
+ console.log(myArr);
+
